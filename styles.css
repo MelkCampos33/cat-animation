@@ -1,0 +1,274 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #6666cc;
+}
+
+.container {
+    background-color: #fff;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    box-shadow: 0 20px 40px rgba(10, 10, 49, 0.2);
+}
+
+.kitty {
+    position: absolute;
+}
+
+.face {
+    background-color: #6666cc;
+    position: absolute;
+    width: 150px;
+    height: 80px;
+    border-radius: 100px;
+    top: 110px;
+    left: 82px;
+}
+
+.ear {
+    background-color: #333399;
+    position: absolute;
+    width: 22px;
+    height: 23px;
+
+    border-radius: 10px 30px 0 0;
+    top: -23px;
+    left: 60px;
+    box-shadow: 21px 0 #333399;
+}
+
+.eye {
+    background-color: #330033;
+    width: 12px;
+    height: 12px;
+
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    border-radius: 50%;
+    box-shadow: 18px 0 #330033;
+    animation: blick 4.5s infinite;
+}
+
+@keyframes blink {
+
+    0% {
+        transform: scaleY(0.3);
+    }
+
+    4% {
+        transform: scaleY(0.3);
+    }
+
+    5% {
+        transform: scaleY(1);
+    }
+}
+
+.mouth {
+    background-color: #fff;
+    width: 47px;
+    height: 15px;
+
+    position: absolute;
+    top: 45px;
+    left: 65px;
+    border-radius: 20px;
+}
+
+.mouth::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    left: -2px;
+
+    border-radius: 50%;
+    box-shadow: 27px 0 #fff;
+}
+
+
+.nose {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 12px;
+
+    border-top: 12px solid #ff9999;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+
+}
+
+.whisker-1 {
+    background-color: #330033;
+    width: 25px;
+    height: 1.2px;
+    position: absolute;
+    bottom: 3px;
+    right: 40px;
+}
+
+.whisker-1:before,
+.whisker-1:after {
+    content: "";
+    position: absolute;
+    background-color: #330033;
+    width: 20px;
+    height: 1.2px;
+    right: 0;
+}
+
+/* inclinando o bigode do gato na diagonal*/
+.whisker-1:before {
+    bottom: 8px;
+    transform: rotate(7deg);
+}
+
+.whisker-1:after {
+    bottom: -8px;
+    transform: rotate(-7deg);
+}
+
+.whisker-2 {
+    background-color: #330033;
+    width: 25px;
+    height: 1.2px;
+    position: absolute;
+    bottom: 3px;
+    z-index: 1px;
+    left: 40px;
+}
+
+.whisker-2:before,
+.whisker-2:after {
+
+    background-color: #330033;
+
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 1.2px;
+    left: 0;
+}
+
+.whisker-2:before {
+    bottom: 8px;
+    transform: rotate(-7deg);
+}
+
+.whisker-2::after {
+    bottom: -8px;
+    transform: rotate(7deg);
+}
+
+.body {
+    position: absolute;
+    width: 115px;
+    height: 0;
+    top: 70px;
+    left: -10px;
+
+    border-bottom: 110px solid #6666cc;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+}
+
+.hand {
+    position: absolute;
+    height: 50px;
+}
+
+.hand-l {
+    background-color: #fff;
+    border-radius: 10px;
+
+    position: relative;
+    width: 22px;
+    height: 29px;
+    top: 30px;
+    left: 45px;
+    animation: type-1 1.5s infinite;
+}
+
+@keyframes type-1 {
+    50% {
+        transform: translateY(50px);
+        height: 18px;
+    }
+}
+
+.hand-r {
+    background-color: #fff;
+
+    position: relative;
+    width: 22px;
+    height: 18px;
+    border-radius: 10px;
+    left: 85px;
+    top: 48px;
+    animation: type-2 1.5s infinite;
+}
+
+@keyframes type-2 {
+    50% {
+        transform: translateY(-40px);
+        height: 29px;
+    }
+}
+
+.tail {
+    background-color: #333399;
+
+    width: 50px;
+    height: 22px;
+    position: absolute;
+    top: 165px;
+    left: -15px;
+    border-radius: 22px;
+}
+
+
+.laptop {
+    background-color: #333399;
+    border-radius: 15px;
+
+    position: absolute;
+    width: 120px;
+    height: 15px;
+    top: 280px;
+    left: 195px;
+}
+
+.laptop:before {
+    position: absolute;
+    background-color: #341f98;
+    border-radius: 15px;
+
+    content: "";
+    width: 100px;
+    height: 15px;
+    top: 0;
+    right: 80px;
+}
+
+.laptop:after {
+    position: absolute;
+    content: "";
+    background-color: #341f98;
+
+    width: 110px;
+    height: 80px;
+    bottom: 14px;
+    left: 10px;
+
+    border-radius: 5px;
+    transform: skew(-10deg);
+}
